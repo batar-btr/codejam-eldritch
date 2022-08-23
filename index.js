@@ -118,3 +118,5 @@ const difficultyFormHandler = event => {
 ancientsContainer.addEventListener('click', ancientCardsHandler);
 difficultyForm.addEventListener('change', difficultyFormHandler);
 shuffleBtn.addEventListener('click', () => shuffleCard(options));
+
+console.log('test gh-pages');
