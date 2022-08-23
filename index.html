@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>CodeJam Eldritch</title>
+</head>
+
+<body>
+    <header>
+        <h3 class="ancient-title">choose your hero</h3>
+        <div class="ancients">
+            <div class="ancient-card active">
+                <img class="ancient-card-img" src="./assets/Ancients/Azathoth.png" alt="azathoth">
+            </div>
+            <div class="ancient-card">
+                <img class="ancient-card-img" src="./assets/Ancients/Cthulthu.png" alt="cthulhu">
+            </div>
+            <div class="ancient-card">
+                <img class="ancient-card-img" src="./assets/Ancients/IogSothoth.png" alt="iogSothoth">
+            </div>
+            <div class="ancient-card">
+                <img class="ancient-card-img" src="./assets/Ancients/ShubNiggurath.png" alt="shubNiggurath">
+            </div>
+        </div>
+        <div class="difficulty-container">
+            <h3 class="difficulty-title">choose difficulty</h3>
+            <form id="difficulty-form">
+                <div class="diff-block">
+                    <label for="veryeasy">Very Easy</label>
+                    <input name="difficulty" type="radio" id="veryeasy" value="veryeasy">
+                </div>
+                <div class="diff-block">
+                    <label for="easy">Easy</label>
+                    <input name="difficulty" type="radio" id="easy" value="easy">
+                </div>
+                <div class="diff-block active">
+                    <label for="normal">Normal</label>
+                    <input name="difficulty" type="radio" id="normal" value="normal" checked>
+                </div>
+                <div class="diff-block">
+                    <label for="hard">Hard</label>
+                    <input name="difficulty" type="radio" id="hard" value="hard">
+                </div>
+                <div class="diff-block">
+                    <label for="veryhard">Very Hard</label>
+                    <input name="difficulty" type="radio" id="veryhard" value="veryhard">
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div>
+            <button class="shuffle-btn">Shuffle Cards</button>
+        </div>
+        <div class="game-board">
+            <div>
+                <div class="tracker">
+                    <div class="stage-wrap">
+                        <h4>first Stage</h4>
+                        <div class="stage firstStage">
+                            <div class="box greenCards"></div>
+                            <div class="box brownCards"></div>
+                            <div class="box blueCards"></div>
+                        </div>
+                    </div>
+                    <div class="stage-wrap">
+                        <h4>second Stage</h4>
+                        <div class="stage secondStage">
+                            <div class="box greenCards"></div>
+                            <div class="box brownCards"></div>
+                            <div class="box blueCards"></div>
+                        </div>
+                    </div>
+                    <div class="stage-wrap">
+                        <h4>third Stage</h4>
+                        <div class="stage thirdStage">
+                            <div class="box greenCards"></div>
+                            <div class="box brownCards"></div>
+                            <div class="box blueCards"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card-board"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
