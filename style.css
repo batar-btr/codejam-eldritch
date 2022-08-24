@@ -136,6 +136,7 @@ main > div {
 .game-board {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding: 0;
 }
 .tracker {
@@ -146,11 +147,6 @@ main > div {
     background-color: rgba(0, 0, 0, 0.536);
     padding-bottom: 20px;
     border-radius: 20px;
-}
-.card-board {
-    width: 300px;
-    height: 300px;
-    background-color: rgba(0, 0, 0, 0.536);
 }
 .stage {
     display: flex;
@@ -163,7 +159,29 @@ main > div {
     padding: 10px;
     text-align: center;
 }
-
+@keyframes lighting {
+    from {
+        box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.6);
+        transform: scale(1);
+    }
+    20% {
+        box-shadow:
+        0 0 6px 3px #fff,
+        /* inner white */
+        0 0 10px 6px #f0f,
+        /* middle magenta */
+        0 0 14px 9px #0ff;
+        transform: scale(1.2);
+    }
+    to {
+        box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.6);
+        transform: scale(1);
+    }
+}
+.light {
+    animation-name: lighting;
+    animation-duration: 600ms;
+}
 .box {
     display: flex;
     justify-content: center;
@@ -185,4 +203,50 @@ main > div {
 }
 .brownCards {
     background-color: rgba(165, 42, 42, 0.3);
+}
+.card-board {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.536);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.deck, .current-card {
+    position: relative;
+    width: 150px;
+    height: 221px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.8);
+    transition: all 200ms ease-out;
+}
+.card-board img {
+    display: block;
+    max-width: 100%;
+    cursor: pointer;
+}
+.deck-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 0.731);
+    font-size: 100px;
+    user-select: none;
+    pointer-events: none;
+}
+.deck:hover {
+    transform: scale(1.02);
+}
+.deck:active {
+    transform: scale(0.98);
+}
+.current-card:hover {
+    transform: scale(1.2);
 }
