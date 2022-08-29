@@ -140,3 +140,5 @@ difficultyForm.addEventListener('change', difficultyFormHandler);
 shuffleBtn.addEventListener('click', () => shuffleCard(options));
 
 boxes.forEach(box => box.addEventListener('animationend',() => box.classList.remove('light')));
+
+console.log('gh-pages deploy test');
